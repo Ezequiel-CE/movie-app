@@ -33,7 +33,7 @@ export default function Component() {
           </Link>
         </div>
         <p className='mt-4 md:mt-0 text-sm text-gray-300'>
-          &copy; 2024 Acme Inc. All rights reserved.
+          &copy; CeCe. All rights reserved.
         </p>
       </div>
     </div>
