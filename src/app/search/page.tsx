@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Paginator from "@/components/Movie/Card/Paginator";
 import { setPage } from "@/redux/searchSlice";
 import { Spinner } from "@/components/ui/Spiner";
+import NoResultsFound from "@/components/Movie/Card/NoResult";
 
 export default function Page() {
   const { query, page } = useSelector((state: RootState) => state.search);
@@ -17,6 +18,7 @@ export default function Page() {
     data = { total_pages: 0, results: [], total_results: 0 },
     isLoading,
     isFetching,
+    isError,
   } = useSearchMoviesQuery({
     query,
     page,
@@ -25,7 +27,7 @@ export default function Page() {
   const loading = isLoading || isFetching;
 
   return (
-    <div className=' flex flex-col'>
+    <div className=' flex flex-col items-center'>
       {query.length > 0 && (
         <h2 className='text-center my-10 font-bold text-5xl'>{`Search Result for "${query}"`}</h2>
       )}
@@ -43,6 +45,7 @@ export default function Page() {
           showPreviousNext
         />
       )}
+      {!loading && data.results.length === 0 && !isError && <NoResultsFound />}
     </div>
   );
 }

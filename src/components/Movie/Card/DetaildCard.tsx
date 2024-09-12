@@ -50,7 +50,7 @@ function DetailCard({ movie }: { movie: DetailMovieItem }) {
                 <Badge
                   key={genre.id}
                   variant='default'
-                  className='bg-teal-700  '
+                  className='bg-teal-700 hover:bg-teal-700 '
                 >
                   {genre.name}
                 </Badge>
