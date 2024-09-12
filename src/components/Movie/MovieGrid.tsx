@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { MovieItem } from "@/types/movie";
-import { IMG_URL } from "@/config/constants";
 import MovieCard from "./Card/MovieCard";
 
 type CarouselProps = {

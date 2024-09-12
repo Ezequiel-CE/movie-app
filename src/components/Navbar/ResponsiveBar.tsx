@@ -2,10 +2,12 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Search, Menu, X } from "lucide-react";
+import { Search, Menu, X, PopcornIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { useRouter } from "next/navigation";
 
 export default function Component() {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -21,9 +23,10 @@ export default function Component() {
             >
               {isMenuOpen ? <X /> : <Menu />}
             </Button>
-            <span className='text-white text-lg font-semibold ml-2 md:ml-0'>
-              Logo
-            </span>
+            <PopcornIcon
+              className='text-white w-8 h-8  ml-2 md:ml-0 hover:cursor-pointer'
+              onClick={() => router.push("/")}
+            />
           </div>
           <div className='hidden md:flex items-center space-x-4'>
             <Button variant='ghost' className='text-white hover:text-gray-300'>

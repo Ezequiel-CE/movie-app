@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <ResponsiveBar />
-        {children}
+        <div className='mx-auto px-4 md:px-6'>{children}</div>
         <Footer />
       </body>
     </html>

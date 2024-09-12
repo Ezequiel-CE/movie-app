@@ -1,4 +1,4 @@
-import { MovieItem } from "@/types/movie";
+import { DetailMovieItem, MovieItem } from "@/types/movie";
 import axios from "axios";
 
 const API_KEY = process.env.TMDB_API_KEY;
@@ -24,17 +24,13 @@ export const getTopMovies = async (): Promise<MovieItem[]> => {
   return data;
 };
 
-export const getMovies = async (query: string) => {
-  const response = await api.get("/search/movie", { params: { query } });
-  return response.data;
-};
-
-export const getMovieDetails = async (id: string) => {
+export const getMovieDetails = async (id: string): Promise<DetailMovieItem> => {
   const response = await api.get(`/movie/${id}`);
   return response.data;
 };
 
 export const getSimilarMovies = async (id: string) => {
   const response = await api.get(`/movie/${id}/similar`);
-  return response.data;
+  const data = response.data.results.slice(0, 14);
+  return data;
 };
