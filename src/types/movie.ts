@@ -74,3 +74,15 @@ export type DetailMovieItem = {
   vote_average: number;
   vote_count: number;
 };
+
+export type searchMoviesParams = {
+  query: string;
+  page: number;
+};
+
+expoer type searchMoviesResponse = {
+  page: number;
+  results: MovieItem[];
+  total_pages: number;
+  total_results: number;
+};

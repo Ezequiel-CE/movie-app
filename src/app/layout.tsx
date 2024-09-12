@@ -3,6 +3,7 @@ import "./globals.css";
 import React from "react";
 import ResponsiveBar from "@/components/Navbar/ResponsiveBar";
 import Footer from "@/components/ui/Footer";
+import ReduxProvider from "@/redux/ReduxProvider";
 
 export const metadata: Metadata = {
   title: "The movie app",
@@ -16,10 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>
-        <ResponsiveBar />
-        <div className='mx-auto px-4 md:px-6'>{children}</div>
-        <Footer />
+      <body className='min-h-screen flex flex-col'>
+        <ReduxProvider>
+          <ResponsiveBar />
+          <div className='flex-1 mx-auto px-4 md:px-6 min-h-full'>
+            {children}
+          </div>
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );

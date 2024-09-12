@@ -1,9 +1,6 @@
+import { BASE_URL, API_KEY } from "@/config/constants";
 import { DetailMovieItem, MovieItem } from "@/types/movie";
 import axios from "axios";
-
-const API_KEY = process.env.TMDB_API_KEY;
-
-const BASE_URL = "https://api.themoviedb.org/3";
 
 const api = axios.create({
   baseURL: BASE_URL,
