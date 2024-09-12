@@ -25,3 +25,9 @@ NEXT_PUBLIC_TMDB_API_KEY='xxxxxxxxxx'
 - And start development server with `yarn dev` or `npm run dev `
 
 - You can access in `http://localhost:3000`
+
+# Images
+
+![image](https://github.com/user-attachments/assets/7e5bfe8c-f579-4bd7-a521-fd336f30099a)
+![image](https://github.com/user-attachments/assets/5a2684a6-6ff3-4daa-8afe-c174bba2dc49)
+
