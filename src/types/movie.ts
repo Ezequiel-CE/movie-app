@@ -80,7 +80,7 @@ export type searchMoviesParams = {
   page: number;
 };
 
-expoer type searchMoviesResponse = {
+export type searchMoviesResponse = {
   page: number;
   results: MovieItem[];
   total_pages: number;

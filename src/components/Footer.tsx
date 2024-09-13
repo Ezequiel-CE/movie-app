@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { YoutubeIcon, TwitterIcon, GithubIcon } from "../icons";
+import { YoutubeIcon, TwitterIcon, GithubIcon } from "./icons/index";
 
 export default function Component() {
   return (
@@ -8,7 +8,7 @@ export default function Component() {
       <div className='container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between'>
         <div className='flex items-center space-x-4'>
           <Link
-            href='#'
+            href='/'
             className='text-white hover:text-gray-300'
             prefetch={false}
           >
@@ -16,7 +16,7 @@ export default function Component() {
             <span className='sr-only'>YouTube</span>
           </Link>
           <Link
-            href='#'
+            href='/'
             className='text-white hover:text-gray-300'
             prefetch={false}
           >
@@ -24,7 +24,7 @@ export default function Component() {
             <span className='sr-only'>GitHub</span>
           </Link>
           <Link
-            href='#'
+            href='/'
             className='text-white hover:text-gray-300'
             prefetch={false}
           >

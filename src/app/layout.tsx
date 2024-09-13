@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
 import ResponsiveBar from "@/components/Navbar/ResponsiveBar";
-import Footer from "@/components/ui/Footer";
 import ReduxProvider from "@/redux/ReduxProvider";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "The movie app",

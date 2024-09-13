@@ -10,7 +10,7 @@ import React from "react";
 type PaginatorProps = {
   currentPage: number;
   totalPages: number;
-  onPageChange: (pageNumber: number) => void;
+  onPageChange: (param: number) => void;
   showPreviousNext: boolean;
 };
 
